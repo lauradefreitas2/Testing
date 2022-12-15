@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221214 11:40:37.612" rpa="false" schemaversion="3">
+<suite id="s1" name="Laura" source="D:\Digital house\Testing I\robot\laura.robot">
+<test id="s1-t1" name="processo de compra da loja Sauce Demo" line="5">
+<kw name="Abrir o site da loja Sauce demo" library="laura">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221214 11:40:37.880" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" starttime="20221214 11:40:37.879" endtime="20221214 11:40:40.438"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221214 11:40:40.439" endtime="20221214 11:40:40.575"/>
+</kw>
+<status status="PASS" starttime="20221214 11:40:37.879" endtime="20221214 11:40:40.575"/>
+</kw>
+<kw name="Fazer Login" library="laura">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_USUARIO}</arg>
+<arg>${USUARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221214 11:40:40.577" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20221214 11:40:40.576" endtime="20221214 11:40:40.696"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221214 11:40:40.696" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20221214 11:40:40.696" endtime="20221214 11:40:40.783"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221214 11:40:40.784" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20221214 11:40:40.783" endtime="20221214 11:40:40.880"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221214 11:40:40.895" level="INFO">Current page contains text 'Products'.</msg>
+<status status="PASS" starttime="20221214 11:40:40.880" endtime="20221214 11:40:40.895"/>
+</kw>
+<status status="PASS" starttime="20221214 11:40:40.576" endtime="20221214 11:40:40.896"/>
+</kw>
+<status status="PASS" starttime="20221214 11:40:37.878" endtime="20221214 11:40:40.896"/>
+</test>
+<status status="PASS" starttime="20221214 11:40:37.614" endtime="20221214 11:40:40.898"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Laura">Laura</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
